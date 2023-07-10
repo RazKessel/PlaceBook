@@ -1,0 +1,8 @@
+<div class="comments">
+  <div class="title" (click)="toggleComments()">View all {{ comments.length }} comments</div>
+  <div *ngIf="isExpanded" class="comment-list">
+    <div *ngFor="let comment of comments">
+      <app-comment [comment]="comment.content"></app-comment>
+    </div>
+  </div>
+</div>

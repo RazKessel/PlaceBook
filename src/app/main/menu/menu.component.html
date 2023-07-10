@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="logo" (click)="goTo('/')">
+        <img src="./../../../assets/logo.svg">
+        <div class="title">
+            PlaceBook
+        </div>
+    </div>
+
+    <div class="search">
+        <input type="text" placeholder="Search.." [(ngModel)]="searchQuery" (input)="onInputChange()">
+    </div>
+    <div class="menuItems">
+
+        <div class="item" (click)="goTo('new')" *ngIf="this.ls.get('login') == 'true'">
+            <img src="./../../../assets/menu/newPost.svg">
+        </div>
+        <div class="item" (click)="goTo('/')">
+            <img src="./../../../assets/menu/homeIcon.svg">
+        </div>
+        <div class="item">
+            <app-user-profile-dropdown></app-user-profile-dropdown>
+
+            <!-- <img src="./../../../assets/menu/profileIcon.svg"> -->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="upload-container">
+    <form class="uploadForm" [formGroup]="newPlaceForm" (submit)="onSubmit()">
+        <label for="fileInput" class="cube-button" *ngIf="!selectedFile">
+            <div class="upload-text">Upload</div>
+            <input type="file" id="fileInput" (change)="onFileSelected($event)" formControlName="photo">
+          </label>
+          
+        <div class="cube" *ngIf="selectedFile" (click)="onChangeImage()">
+            <img [src]="previewUrl" alt="Preview" class="cube-preview">
+        </div>
+        <div class="location-container">
+            <input type="text" id="locationInput" class="location-input" placeholder="Search location"
+                (input)="onLocationInput($event)" [value]="selectedLocation" formControlName="location">
+            <ul class="location-list" *ngIf="showLocationList">
+                <li class="location-item" *ngFor="let location of locationResults"
+                    (click)="onLocationSelected(location)">
+                    {{ location }}
+                </li>
+            </ul>
+        </div>
+
+        <div class="input">
+            <input type="text" placeholder="Title" formControlName="title">
+        </div>
+
+        <div class="input">
+            <input type="text" class="description-input" placeholder="Description" formControlName="description">
+        </div>
+
+        <button class="btn" type="submit">New Place</button>
+    </form>
+
+
+</div>

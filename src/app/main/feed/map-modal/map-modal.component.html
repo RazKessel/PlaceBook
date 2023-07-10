@@ -1,0 +1,9 @@
+<div class="modal-wrapper" *ngIf="showModal">
+  <div class="modal-overlay"></div>
+  <div class="modal-container">
+    <div class="modal-content">
+      <div #mapContainer class="map-container"></div>
+    </div>
+    <button class="modal-close" (click)="closeModal()">Close</button>
+  </div>
+</div>

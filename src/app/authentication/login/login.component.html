@@ -1,0 +1,43 @@
+<div class="component-class">
+
+    <div class="logo">
+        <img src="./../../../assets/logo.svg">
+        <div class="title">
+            PlaceBook
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="title">
+            Welcome back to PlaceBook
+        </div>
+
+        <form class="loginForm" [formGroup]="loginForm" >
+            <div class="loginInputs">
+                <div class="section">
+                    <div class="sectionTitel">
+                        Email
+                    </div>
+                    <div class="sectionInput">
+                        <input type="email" class="inputTag" formControlName="email">
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="sectionTitel">
+                        Password
+                    </div>
+                    <div class="sectionInput">
+                        <input type="password" class="inputTag" formControlName="password">
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn" type="submit" (click)="onSubmit()">Login</button>
+            <div class="loginLink">
+                <div class="text"> Have no account?</div> <a class="LoginHyper" (click)="goTo('auth/register')">Signup</a>
+            </div>
+        </form>
+    </div>
+
+</div>

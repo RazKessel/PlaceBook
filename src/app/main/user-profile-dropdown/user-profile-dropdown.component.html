@@ -1,0 +1,13 @@
+<div class="dropdown" (click)="toggleOverlayPanel($event)">
+    <button class="dropdown-toggle" type="button">
+      <img src="./../../../assets/menu/profileIcon.svg" alt="Profile Icon">
+    </button>
+    <div #overlayPanel class="overlay-panel" [ngClass]="{ 'show': isOverlayPanelOpen }">
+      <ul class="dropdown-menu">
+        <li *ngIf="this.ls.get('login') != 'true'"><a (click)="connect()">Login</a></li>
+        <li *ngIf="this.ls.get('login') != 'true'"><a (click)="register()">Register</a></li>
+        <li *ngIf="this.ls.get('login') == 'true'"><a (click)="logout()">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+  

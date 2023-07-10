@@ -1,0 +1,138 @@
+.upload-container,
+.uploadForm {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    font-family: 'sf-ui-display-light';
+
+    .location-container {
+        position: relative;
+
+    }
+}
+
+.location-input,
+input {
+    //margin-top: 10px;
+    width: 300px;
+    height: 30px;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid #B2B2B2;
+    font-family: 'sf-ui-display-light';
+    font-size: 14px;
+    padding-left: 8px;
+    /* Existing styles for the location input box */
+}
+
+.btn {
+    margin-top: 20px;
+    width: 306px;
+    height: 39px;
+    border-radius: 6px;
+    border: none;
+    font-family: 'sf-ui-display-light';
+    font-size: 18px;
+    color: #fff;
+    background-color: #2DA4FF;
+}
+
+.location-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.location-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.location-item:hover,
+.location-item:focus {
+    background-color: #f1f1f1;
+}
+
+
+.cube-button {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 2px dashed #ccc;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cube-button input[type="file"] {
+    display: none;
+}
+
+.cube {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.cube-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cube::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.cube:hover::before {
+    opacity: 1;
+}
+
+.cube-button span {
+    color: #999;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cube-button:hover span {
+    color: #555;
+}
+
+.description-input {
+    width: 300px;
+    padding: 8px;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid #B2B2B2;
+    font-family: 'sf-ui-display-light';
+    font-size: 14px;
+}
+
+input::placeholder {
+    color: #999;
+}

@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    position: sticky;
+    height: 50px;
+    .logo {
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        img {
+            width: 34px;
+        }
+
+        .title {
+            font-family: 'sf-ui-display-semibold';
+            font-size: 24px;
+        }
+    }
+
+    .search{
+        margin-top: 5px;
+        display: flex;
+        justify-content: center;
+        justify-self: center;
+        width: 100%;
+        //margin-left: 80px;
+        input{
+            font-family: 'sf-ui-display-light';
+            font-size: 14px;
+            width: calc(100%);
+            border: none;
+            outline: none;
+            border-bottom: 1px solid;
+        }
+    }
+
+    .menuItems {
+        margin-right: 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+}

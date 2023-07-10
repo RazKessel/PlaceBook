@@ -1,0 +1,16 @@
+.comment {
+    margin-bottom: -10px;
+    display: flex;
+    flex-direction: column;
+
+    p {
+        font-family: 'sf-ui-display-light';
+        //margin-left: 50px;
+    }
+
+    .line {
+        //align-self: center;
+        //width: 50%;
+        border-bottom: 1px solid gray;
+    }
+}

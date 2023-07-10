@@ -1,0 +1,26 @@
+.comments {
+    margin-top: 5px;
+}
+
+.title {
+    cursor: pointer;
+    color: #6E6E6E;
+    text-decoration: underline;
+    font-family: 'sf-ui-display-thin';
+}
+
+.comment-list {
+    ///margin-top: 3px;
+}
+
+.comments .is-expanded+.comment-list {
+   //display: block;
+}
+
+.comments .is-expanded::after {
+    content: " ▲";
+}
+
+.comments .is-expanded+.comment-list::before {
+    content: "";
+}

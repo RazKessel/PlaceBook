@@ -1,0 +1,75 @@
+<app-map-modal [location]="post.location" #mapModal></app-map-modal>
+
+<div class="container">
+
+    <div class="topBar">
+
+        <div class="leftSide">
+            <div class="userPosted">
+                {{post.user.name}}
+            </div>
+            <div class="location" (click)="openMapModal()">
+                {{post.location}}
+
+            </div>
+        </div>
+
+        <div class="rightSide">
+            <!-- <div class="ratingStar">
+                <app-star-rating [averageRating]="post.averageRating"
+                    (ratingChange)="onRatingChange(post._id ,$event)"></app-star-rating>
+
+            </div> -->
+
+            <img *ngIf="post.user._id._id == this.ls.get('userId')" width="20px" src="./../../../../assets/feed/reject.png" (click)="deletePlace(post._id)">
+        </div>
+
+    </div>
+
+    <div class="image">
+        <img src={{post.photo}}>
+    </div>
+
+    <div class="underImageBar">
+        <div class="rating" *ngIf="this.ls.get('login') == 'true'">
+            <div class="likeCom">
+                <div class="like" *ngIf="post.isLiked" (click)="dislikePlace(post._id)">
+                    <img src="./../../../../assets/feed/like.svg">
+                </div>
+                <div class="unlike" *ngIf="!post.isLiked" (click)="likePlace(post._id)">
+                    <img src="./../../../../assets/feed/emptyLike.svg">
+                </div>
+
+                <div class="comment" (click)="showComment()">
+                    <img src="./../../../../assets/feed/comment.svg">
+                </div>
+            </div>
+            <div class="rightSide">
+                <div class="ratingStar">
+                    <app-star-rating [averageRating]="post.averageRating"
+                        (ratingChange)="onRatingChange(post._id ,$event)"></app-star-rating>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="newComment" *ngIf="comment">
+            <form [formGroup]="commentForm">
+                <input type="text" placeholder="Add a comment..." formControlName="comment">
+                <button type="submit" (click)="addComment(post._id)">Post</button>
+            </form>
+        </div>
+
+        <div class="totalLike">
+            {{post.likes.length}} Likes
+        </div>
+
+    </div>
+
+    <div class="description">
+        {{post.description}}
+    </div>
+
+    <app-comments [comments]="post.comments"></app-comments>
+
+</div>

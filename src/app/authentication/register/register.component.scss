@@ -1,0 +1,102 @@
+.component-class {
+    background-image: url('./../../../assets/auth/Background1.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    img {
+        width: 34px;
+    }
+
+    .title {
+        font-family: 'sf-ui-display-semibold';
+        font-size: 24px;
+    }
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    .title {
+        font-family: 'sf-ui-display-semibold';
+        font-size: 24px;
+    }
+
+    .loginForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+
+        .loginInputs {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            .section {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                .sectionTitel {
+                    font-family: 'sf-ui-display-medium';
+                }
+
+                .sectionInput {
+
+                    .inputTag {
+                        width: 280px;
+                        height: 30px;
+                        font-family: 'sf-ui-display-light';
+                        font-size: 18px;
+                        padding-left: 8px;
+                        //border: none;
+                        border: 1px solid #B2B2B2;
+                        outline: none;
+                        border-radius: 6px;
+                    }
+                }
+            }
+        }
+
+        .btn {
+            width: 280px;
+            height: 39px;
+            border-radius: 6px;
+            border: none;
+            font-family: 'sf-ui-display-light';
+            font-size: 18px;
+            color: #fff;
+            background-color: #2DA4FF;
+        }
+    }
+
+    .loginLink{
+        margin-top: -40px;
+        margin-left: 7px;
+        align-self: flex-start;
+        display: flex;
+        font-family: 'sf-ui-display-light';
+        font-size: 14px;
+        gap: 4px;
+
+        .LoginHyper{
+            color: #2DA4FF;
+        }
+        
+    }
+}

@@ -1,0 +1,9 @@
+<div class="container" *ngFor="let place of filteredPlaces?.slice()?.reverse()">
+    <app-post 
+    [post]="place" 
+    (like)="likePlace($event)" 
+    (dislike)="dislikePlace($event)" 
+    (newComment)="handleNewComment($event)"
+    (deletePost)="deletePlace($event)"></app-post>
+  </div>
+  
