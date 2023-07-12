@@ -132,7 +132,7 @@ export class NewPlaceComponent {
 
       formData.append('title', this.newPlaceForm.controls['title'].value);
       formData.append('description', this.newPlaceForm.controls['description'].value);
-      formData.append('location', this.newPlaceForm.controls['location'].value);
+      formData.append('location', this.selectedLocation);
       formData.append('photo', file, file.name);
 
       this.placesService.newPlace(formData).then((response) => {
